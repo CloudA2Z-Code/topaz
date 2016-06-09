@@ -4,7 +4,9 @@ namespace Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling
 {
     using Microsoft.Practices.EnterpriseLibrary.TransientFaultHandling.Properties;
     using System;
+#if !CORECLR
     using System.Runtime.Serialization;
+#endif
 
     /// <summary>
     /// The special type of exception that provides managed exit from a retry loop. The user code can use this

@@ -1,0 +1,49 @@
+{
+
+  "version": "6.0.1304-*",
+
+  "authors": [ "Microsoft" ],
+  "title": "Enterprise Library - Transient Fault Handling Application Block for .NET Core",
+  "description": "\"The Transient Fault Handling Application Block for Windows Azure (\"Topaz\") provides a set of reusable and testable components for adding retry logic into your Windows Azure applications leveraging Windows Azure SQL Database, Windows Azure storage, Service Bus and Caching Service. This makes your Windows Azure application more reliable and resilient to transient faults (such as temporary network connectivity issues or temporary service unavailability). This improves overall application stability.",
+
+  "packOptions": {
+    "licenseUrl": "https://github.com/CoreCompat/topaz/blob/master/LICENSE.txt",
+    "owners": [ "quamotion" ],
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/CoreCompat/topaz/"
+    }
+  },
+
+  "dependencies": {
+  },
+
+  "buildOptions": {
+    "keyFile": "../CoreCompat.EnterpriseLibrary.Common.snk",
+    "strongName": true,
+    "compile": {
+      "include": [
+        "../Source/Source/TransientFaultHandling/**/*.cs",
+        "../Source/Source/GlobalAssemblyInfo.cs"
+      ]
+    }
+  },
+
+  "frameworks": {
+    "netstandard1.5": {
+      "dependencies": {
+        "NETStandard.Library": "1.5.0-rc2-24027"
+      },
+      "buildOptions": {
+        "define": [ "CORECLR", "SIGN" ]
+      }
+    },
+    "net45": {
+
+    }
+  },
+
+  "runtimes": {
+    "win7-x64": { }
+  }
+}
